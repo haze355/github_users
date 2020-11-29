@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { GithubContext } from "../context/context";
-import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D, WorldMap} from "./Charts";
+//import {  Pie3D, Column3D, Bar3D, Doughnut2D, WorldMap} from "./Charts";
+import {  Pie3D, Column3D, Bar3D, Doughnut2D, } from "./Charts";
 const Repos = () => {
   const { repos } = React.useContext(GithubContext);
 
@@ -82,7 +83,7 @@ const Repos = () => {
         <Column3D data={stars} />
         <Doughnut2D data={mostPopular} />
         <Bar3D data={forks} />
-        <WorldMap data={locations} />
+      
       </Wrapper>
     </section>
   );
