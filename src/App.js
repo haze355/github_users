@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
+    <AuthWrapper>
     <Router>
       <Switch>
         <Route path="/" exact={true}>
@@ -17,6 +18,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </AuthWrapper>
   );
 }
 
