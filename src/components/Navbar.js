@@ -5,11 +5,15 @@ import { useAuth0 } from '@auth0/auth0-react';
 const Navbar = () => {
   const {isAuthenticated, loginWithRedirect, logout, user, isLoading} = useAuth0();
   const authenticatedUser = isAuthenticated && user;
-
+  const hasPicture = user && user.picture;
+  const hasName = user && user.name;
+  
+  console.log({user});
   return (
   <Wrapper>
-    {authenticatedUser && user.picture && <img scr={user.picture} alt={user.name} /> }
-    {authenticatedUser && user.name && (<h5>Welcome, <strong>{user.name}</strong>!</h5>)}
+    {authenticatedUser && hasPicture && <img scr={user.picture} alt={user.name}/> }
+   
+    {authenticatedUser && hasName && (<h5>Welcome, <strong>{user.name}</strong>!</h5>)}
     
     {authenticatedUser ? 
     (<button onClick={() => {logout({ returnTo: window.location.origin });}}>Log out</button>) 
