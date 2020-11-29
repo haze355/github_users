@@ -8,13 +8,17 @@ import { Auth0Provider } from "@auth0/auth0-react";
 
 //dev-erqf3q6v.us.auth0.com
 //0Blw9TpflZpWZDnnAoPSlU7WPhjOt5Ht
-
+//https://auth0.github.io/auth0-react/interfaces/auth0provideroptions.html#cachelocation
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
         domain="dev-erqf3q6v.us.auth0.com"
         clientId="0Blw9TpflZpWZDnnAoPSlU7WPhjOt5Ht"
-        redirectUri={window.location.origin}>
+        redirectUri={window.location.origin}
+        cacheLocation = 'localstorage'
+    >
+        
+        
     <GithubProvider>
       <App />
     </GithubProvider>

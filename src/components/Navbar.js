@@ -11,15 +11,15 @@ const Navbar = () => {
   console.log({user});
   return (
   <Wrapper>
-    {authenticatedUser && hasPicture && <img scr={user.picture} alt={user.name} /> }
+    {authenticatedUser && hasPicture && <img src={user.picture} alt={user.name} /> }
    
-    {authenticatedUser && user.name && (<h5>Welcome, <strong>{user.name}</strong>!</h5>)}
-    {authenticatedUser && !user.name && user.nickname && (<h5>Welcome, <strong>{user.nickname}</strong>!</h5>)}
+    {authenticatedUser && user.name && (<h4>Welcome, <strong>{user.name}</strong>!</h4>)}
+    {authenticatedUser && !user.name && user.nickname && (<h4>Welcome, <strong>{user.nickname}</strong>!</h4>)}
     
     {authenticatedUser ? 
-    (<button onClick={() => {logout({ returnTo: window.location.origin });}}>Log out</button>) 
+    (<button  onClick={() => {logout({ returnTo: window.location.origin });}}>Log out</button>) 
     : 
-    (<button onClick={loginWithRedirect}>Login</button>)}
+    (<button  onClick={loginWithRedirect}>Login</button>)}
   </Wrapper>
   );
 };
@@ -27,16 +27,18 @@ const Navbar = () => {
 const Wrapper = styled.nav`
   padding: 1.5rem;
   margin-bottom: 4rem;
-  background: var(--clr-white);
+  background: var(--clr-grey-8);
   text-align: center;
   display: grid;
   grid-template-columns: auto auto 100px;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   gap: 1.5rem;
+  
   h4 {
     margin-bottom: 0;
     font-weight: 400;
+    
   }
   img {
     width: 35px !important;
@@ -45,6 +47,8 @@ const Wrapper = styled.nav`
     object-fit: cover;
   }
   button {
+    border: 1px solid blue;
+    width :10%!important;
     background: transparent;
     border: transparent;
     font-size: 1.2rem;
@@ -52,6 +56,7 @@ const Wrapper = styled.nav`
     letter-spacing: var(--spacing);
     color: var(--clr-grey-5);
     cursor: pointer;
+    white-space: nowrap; 
   }
 `;
 
