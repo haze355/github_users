@@ -14,8 +14,7 @@ function AuthWrapper({children}) {
   }
   return <>{children}</>;
 }
-  return <h2>authwrapper component</h2>;
-}
+ 
 
 const Wrapper = styled.section`
   min-height: 100vh;
