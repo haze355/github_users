@@ -11,7 +11,7 @@ const Navbar = () => {
   console.log({user});
   return (
   <Wrapper>
-    {authenticatedUser && hasPicture && <img scr="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt={user.name} /> }
+    {authenticatedUser && hasPicture && <img scr={user.picture} alt={user.name} /> }
    
     {authenticatedUser && user.name && (<h5>Welcome, <strong>{user.name}</strong>!</h5>)}
     {authenticatedUser && !user.name && user.nickname && (<h5>Welcome, <strong>{user.nickname}</strong>!</h5>)}
