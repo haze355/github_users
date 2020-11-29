@@ -5,6 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { GithubContext, GithubProvider } from "./context/context";
 import { Auth0Provider } from "@auth0/auth0-react";
+
 //dev-erqf3q6v.us.auth0.com
 //0Blw9TpflZpWZDnnAoPSlU7WPhjOt5Ht
 
