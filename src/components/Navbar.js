@@ -6,14 +6,15 @@ const Navbar = () => {
   const {isAuthenticated, loginWithRedirect, logout, user, isLoading} = useAuth0();
   const authenticatedUser = isAuthenticated && user;
   const hasPicture = user && user.picture;
-  const hasName = user && user.name;
+  
   
   console.log({user});
   return (
   <Wrapper>
-    {authenticatedUser && hasPicture && <img scr={user.picture} alt={user.name}/> }
+    {authenticatedUser && hasPicture && <img scr="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt={user.name} /> }
    
-    {authenticatedUser && hasName && (<h5>Welcome, <strong>{user.name}</strong>!</h5>)}
+    {authenticatedUser && user.name && (<h5>Welcome, <strong>{user.name}</strong>!</h5>)}
+    {authenticatedUser && !user.name && user.nickname && (<h5>Welcome, <strong>{user.nickname}</strong>!</h5>)}
     
     {authenticatedUser ? 
     (<button onClick={() => {logout({ returnTo: window.location.origin });}}>Log out</button>) 
