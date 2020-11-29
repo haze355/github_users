@@ -11,10 +11,10 @@ const Navbar = () => {
   console.log({user});
   return (
   <Wrapper>
-    {authenticatedUser && hasPicture && <img scr={user.picture} alt={user.name} /> }
+    {authenticatedUser && hasPicture && <img src={user.picture} alt={user.name} /> }
    
-    {authenticatedUser && user.name && (<h5>Welcome, <strong>{user.name}</strong>!</h5>)}
-    {authenticatedUser && !user.name && user.nickname && (<h5>Welcome, <strong>{user.nickname}</strong>!</h5>)}
+    {authenticatedUser && user.name && (<h4>Welcome, <strong>{user.name}</strong>!</h4>)}
+    {authenticatedUser && !user.name && user.nickname && (<h4>Welcome, <strong>{user.nickname}</strong>!</h4>)}
     
     {authenticatedUser ? 
     (<button onClick={() => {logout({ returnTo: window.location.origin });}}>Log out</button>) 
@@ -37,6 +37,7 @@ const Wrapper = styled.nav`
   h4 {
     margin-bottom: 0;
     font-weight: 400;
+    text-align:right;
   }
   img {
     width: 35px !important;
@@ -52,6 +53,7 @@ const Wrapper = styled.nav`
     letter-spacing: var(--spacing);
     color: var(--clr-grey-5);
     cursor: pointer;
+    float:right;
   }
 `;
 
