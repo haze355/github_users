@@ -121,11 +121,11 @@ const Wrapper = styled.div`
   justify-items: center;
   gap: 2rem;
   @media (min-width: 800px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   @media (min-width: 1200px) {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr;
   }
 
   div {

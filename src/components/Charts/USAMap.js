@@ -41,7 +41,7 @@ const ChartComponent = ({ data }) => {
         showentityhovereffect: "0",
         showlabels: "0",
         entitytooltext:
-          "<div style='font-size:14px; text-align:center; padding: auto; color:black;'>$lName</div><div style='font-size:12px; color:black;'>Total Count: <b>$value</b></div>",
+          "<div style='width:30px; font-size:14px; text-align:center; padding: auto; color:black;'>$lName</div><div style='font-size:12px; color:black;'>Total Count: <b>$value</b></div>",
         entityfillhovercolor: "#FFF9C4",
         nullentitycolor: "#ECE9D3"
       },
@@ -51,11 +51,12 @@ const ChartComponent = ({ data }) => {
         gradient: "1",
         color: [
           {
-            maxvalue: "20000000",
-            code: "#EE8D50"
+            maxvalue: "17000000",
+            code: "#EE8D50",
+            "displayValue": "Median"
           },
           {
-            maxvalue: "224156000",
+            maxvalue: "92415600",
             code: "#F24141"
           }
         ]
