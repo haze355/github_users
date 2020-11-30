@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { GithubContext } from "../context/context";
-//import {  Pie3D, Column3D, Bar3D, Doughnut2D, WorldMap} from "./Charts";
-import {  Pie3D, Column3D, Bar3D, Doughnut2D, } from "./Charts";
+import {  Pie3D, Column3D, Bar3D, Doughnut2D} from "./Charts";
+
 const Repos = () => {
   const { repos } = React.useContext(GithubContext);
 
@@ -21,26 +21,6 @@ const Repos = () => {
     return total;
   }, {});
 
-  const locations =  
-  [{
-    id: "NA",
-    value: 515
-  }, {
-    id: "SA",
-    value: 373
-  }, {
-    id: "AS",
-    value: 3875
-  }, {
-    id: "EU",
-    value: 727
-  }, {
-    id: "AF",
-    value: 885
-  }, {
-    id: "AU",
-    value: 32
-  }];
   const mostUsed = Object.values(languages)
     .sort((a, b) => {
       return b.value - a.value;
@@ -83,7 +63,6 @@ const Repos = () => {
         <Column3D data={stars} />
         <Doughnut2D data={mostPopular} />
         <Bar3D data={forks} />
-      
       </Wrapper>
     </section>
   );

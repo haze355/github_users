@@ -34,7 +34,7 @@ const Wrapper = styled.nav`
   justify-content: right;
   align-items: center;
   gap: 1.5rem;
-  
+
   h4 {
     margin-bottom: 0;
     font-weight: 400;
